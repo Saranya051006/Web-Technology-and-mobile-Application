@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web tech Expt 01" />
+    <title>Web Tech Expt 01</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        border-bottom: 3px solid #4caf50;
+        padding-bottom: 10px;
+      }
+
+      h2 {
+        color: #555;
+        margin-top: 30px;
+      }
+
+      .map-container {
+        text-align: center;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #fafafa;
+        border-radius: 5px;
+      }
+
+      .map-image {
+        border: 2px solid #4caf50;
+        border-radius: 5px;
+      }
+
+      .frame-container {
+        margin: 30px 0;
+        border: 2px solid #2196f3;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .links-section {
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #e3f2fd;
+        border-radius: 5px;
+      }
+
+      .links-section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .links-section li {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Experiment 01 - Web Page Creation using HTML</h1>
+
+      <div class="links-section">
+        <h2>Navigation Links</h2>
+        <ul>
+          <li><a href="#map-section">Go to Map Section</a></li>
+          <li><a href="#frame-section">Go to Frame Section</a></li>
+          <li><a href="#links-section">Go to Links Section</a></li>
+          <li>
+            <a href="https://www.google.com" target="_blank"
+              >External Link: Google</a
+            >
+          </li>
+          <li>
+            <a href="https://www.github.com" target="_blank"
+              >External Link: GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="map-section" class="map-container">
+        <h2>Interactive World Map with Hotspots</h2>
+        <p>Click on different continents on the world map to navigate:</p>
+
+        <img
+          src="public/world_map.jpg"
+          alt="World Map"
+          usemap="#worldmap"
+          class="map-image"
+          style="max-width: 100%; height: auto"
+        />
+
+        <map name="worldmap">
+          <area
+            shape="poly"
+            coords="100,100,250,80,300,120,280,200,200,220,120,180"
+            href="https://www.wikipedia.org/wiki/North_America"
+            alt="North America"
+            target="_blank"
+            title="North America - Click to learn more"
+          />
+
+          <area
+            shape="poly"
+            coords="200,250,280,240,300,320,250,380,200,360"
+            href="https://www.wikipedia.org/wiki/South_America"
+            alt="South America"
+            target="_blank"
+            title="South America - Click to learn more"
+          />
+
+          <area
+            shape="poly"
+            coords="400,80,500,70,520,120,480,150,420,140"
+            href="https://www.wikipedia.org/wiki/Europe"
+            alt="Europe"
+            target="_blank"
+            title="Europe - Click to learn more"
+          />
+
+          <area
+            shape="poly"
+            coords="450,180,520,170,540,280,500,320,460,300"
+            href="https://www.wikipedia.org/wiki/Africa"
+            alt="Africa"
+            target="_blank"
+            title="Africa - Click to learn more"
+          />
+
+          <area
+            shape="poly"
+            coords="550,80,700,70,720,150,680,220,600,200,560,140"
+            href="https://www.wikipedia.org/wiki/Asia"
+            alt="Asia"
+            target="_blank"
+            title="Asia - Click to learn more"
+          />
+
+          <area
+            shape="circle"
+            coords="650,320,40"
+            href="https://www.wikipedia.org/wiki/Australia"
+            alt="Australia"
+            target="_blank"
+            title="Australia - Click to learn more"
+          />
+        </map>
+
+        <p style="margin-top: 15px; font-size: 0.9em; color: #666">
+          <strong>Map Legend:</strong> Click on any continent to learn more
+          about it
+        </p>
+      </div>
+
+      <div id="frame-section" class="frame-container">
+        <h2>Embedded Frame (iframe)</h2>
+        <p
+          style="
+            padding: 10px;
+            background-color: #fff3cd;
+            color: #856404;
+            border-radius: 3px;
+          "
+        >
+          Below is an embedded iframe displaying external content:
+        </p>
+
+        <iframe
+          src="https://www.wikipedia.org/wiki/HTML"
+          width="100%"
+          height="500"
+          frameborder="0"
+          style="border: none; display: block"
+          title="Embedded Wikipedia Page"
+        >
+          <p>
+            Your browser does not support iframes.
+            <a href="https://www.wikipedia.org/wiki/HTML" target="_blank"
+              >Click here</a
+            >
+            to view the content.
+          </p>
+        </iframe>
+      </div>
+
+      <div id="links-section" class="links-section">
+        <h2>Additional Links</h2>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              style="color: #1976d2; text-decoration: none; font-weight: bold"
+            >
+              MDN HTML Documentation
+            </a>
+          </li>
+          <li>
+            <a
+              href="#map-section"
+              style="color: #4caf50; text-decoration: underline"
+            >
+              Back to Map Section
+            </a>
+          </li>
+          <li>
+            <a
+              href="#frame-section"
+              style="color: #4caf50; text-decoration: underline"
+            >
+              Back to Frame Section
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <footer
+        style="
+          margin-top: 40px;
+          padding: 20px;
+          text-align: center;
+          background-color: #333;
+          color: white;
+          border-radius: 5px;
+        "
+      >
+        <p style="margin: 0">HTML Experiment 01 - Created for Web Technology</p>
+      </footer>
+    </div>
+  </body>
+</html>
